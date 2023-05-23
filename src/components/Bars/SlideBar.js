@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 
 const SlideBar = (props) => {
   return (
-    <div style={{animateDuration: "0.2s"}} className={`${!props.openDocsMenu && 'hidden'} fixed md:static z-10 md:z-0 bg-white animate__animated animate__slideInLeft md:animate-none md:block w-[350px] shadow-md h-full border-[#dbdbdb] overflow-y-scroll py-10 px-8`}>
+    <div style={{animationDuration: "0.2s"}} className={`${!props.openDocsMenu && 'hidden'} sidebar fixed md:static z-10 md:z-0 bg-white animate__animated animate__slideInLeft md:animate-none md:block w-[350px] shadow-lg md:shadow-none md:border-r h-full border-[#dbdbdb] overflow-y-scroll py-10 px-8`}>
       <ul className={`flex flex-col gap-6 mt-4`}>
         <li onClick={props.toggleDocsMenu} className="text-gray-600 hover:text-gray-800 cursor-pointer">
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/WebApp"
+            to="/docs/WebApp"
           >
             Web Application Security Testing
           </NavLink>
@@ -17,7 +17,7 @@ const SlideBar = (props) => {
         <li onClick={props.toggleDocsMenu} className="text-gray-600 hover:text-gray-800 cursor-pointer">
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/MobApp"
+            to="/docs/MobApp"
           >
             Mobile Application Security Testing
           </NavLink>
@@ -25,7 +25,7 @@ const SlideBar = (props) => {
         <li onClick={props.toggleDocsMenu} className="text-gray-600 hover:text-gray-800 cursor-pointer">
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/Penetration"
+            to="/docs/Penetration"
           >
             Penetration testing Service
           </NavLink>
@@ -33,7 +33,7 @@ const SlideBar = (props) => {
         <li onClick={props.toggleDocsMenu} className="text-gray-600 hover:text-gray-800 cursor-pointer">
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/SourceCode"
+            to="/docs/SourceCode"
           >
             Source Code Audit Service
           </NavLink>
@@ -41,7 +41,7 @@ const SlideBar = (props) => {
         <li onClick={props.toggleDocsMenu} className="text-gray-600 hover:text-gray-800 cursor-pointer">
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/AnnualWebsite"
+            to="/docs/AnnualWebsite"
           >
             Annual Website Security Management Service
           </NavLink>
@@ -49,7 +49,7 @@ const SlideBar = (props) => {
         <li onClick={props.toggleDocsMenu} className="md:hidden text-gray-600 hover:text-gray-800 cursor-pointer">
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/"
+            to="/docs"
           >
             Docs
           </NavLink>
@@ -57,9 +57,17 @@ const SlideBar = (props) => {
         <li onClick={props.toggleDocsMenu} className="md:hidden text-gray-600 hover:text-gray-800 cursor-pointer">
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/"
+            to="/contact"
           >
             Contact
+          </NavLink>
+        </li>
+        <li onClick={props.toggleDocsMenu} className="md:hidden text-gray-600 hover:text-gray-800 cursor-pointer">
+          <NavLink
+            className={({ isActive }) => (isActive ? "font-semibold" : "")}
+            to="/about"
+          >
+            About 
           </NavLink>
         </li>
       </ul>

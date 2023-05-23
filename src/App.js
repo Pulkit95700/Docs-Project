@@ -1,8 +1,10 @@
 import React, { Suspense, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Bars/Navbar";
-const Home = React.lazy(() => import("./pages/Home"));
+import Footer from "./components/Footer";
+import { Navigate } from "react-router-dom";
 
+const Home = React.lazy(() => import("./pages/Home"));
 const MobApp = React.lazy(() => import("./components/MobApp"));
 const Penetration = React.lazy(() => import("./components/Penetration"));
 const SourceCode = React.lazy(() => import("./components/SourceCode"));
@@ -10,6 +12,11 @@ const WebApp = React.lazy(() => import("./components/WebApp"));
 const AnnualWebsite = React.lazy(() => import("./components/AnnualWebsite"));
 const Vulnerability = React.lazy(() => import("./components/Vulnerability"));
 const MainWeb = React.lazy(() => import("./components/MainWeb"));
+
+//  for contact page
+
+const Contact = React.lazy(() => import("./pages/Contact"));
+const About = React.lazy(() => import("./pages/About"));
 
 const App = () => {
   const [openDocsMenu, setopenDocsMenu] = useState(false);
@@ -20,30 +27,37 @@ const App = () => {
 
   return (
     <>
-      <Navbar toggleDocsMenu={toggleDocsMenuHandler} />
+      <Navbar
+        openDocsMenu={openDocsMenu}
+        toggleDocsMenu={toggleDocsMenuHandler}
+      />
       <Routes>
+        <Route path="/" element={<Navigate to="/docs" />} />
         <Route
-          path="/"
+          path="/docs"
           element={
             <Suspense
               fallback={<div className="my-20 mx-auto">Loading...</div>}
             >
-              <Home toggleDocsMenu={toggleDocsMenuHandler} openDocsMenu={openDocsMenu} />
+              <Home
+                toggleDocsMenu={toggleDocsMenuHandler}
+                openDocsMenu={openDocsMenu}
+              />
             </Suspense>
           }
         >
           <Route
-            path="/"
+            path="/docs"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
               >
-                <MainWeb /> 
+                <MainWeb />
               </Suspense>
             }
           />
           <Route
-            path="/WebApp"
+            path="/docs/WebApp"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -53,7 +67,7 @@ const App = () => {
             }
           />
           <Route
-            path="/MobApp"
+            path="/docs/MobApp"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -63,7 +77,7 @@ const App = () => {
             }
           />
           <Route
-            path="/Penetration"
+            path="/docs/Penetration"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -73,7 +87,7 @@ const App = () => {
             }
           />
           <Route
-            path="/SourceCode"
+            path="/docs/SourceCode"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -83,7 +97,7 @@ const App = () => {
             }
           />
           <Route
-            path="/AnnualWebsite"
+            path="/docs/AnnualWebsite"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -93,7 +107,7 @@ const App = () => {
             }
           />
           <Route
-            path="/Vulnerability"
+            path="/docs/Vulnerability"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -103,6 +117,26 @@ const App = () => {
             }
           />
         </Route>
+        <Route
+          path="/contact"
+          element={
+            <Suspense
+              fallback={<div className="my-20 mx-auto">Loading...</div>}
+            >
+              <Contact />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Suspense
+              fallback={<div className="my-20 mx-auto">Loading...</div>}
+            >
+              <About />
+            </Suspense>
+          }
+        />
       </Routes>
     </>
   );

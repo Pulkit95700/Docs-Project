@@ -1,14 +1,15 @@
-import React from 'react'
-import SlideBar from '../components/Bars/SlideBar'
-import { Outlet } from 'react-router-dom'
+import React from 'react';
+import SlideBar from '../components/Bars/SlideBar';
+import { Outlet } from 'react-router-dom';
+import Layout from '../components/Layout';
 const Home = (props) => {
   return (
-    <div className='Home flex-1 flex'>
+    <Layout className='Home h-[100vh] flex'>
         <SlideBar toggleDocsMenu={props.toggleDocsMenu} openDocsMenu={props.openDocsMenu} />
-        <div className='px-8 md:px-16 flex-1 overflow-y-scroll py-14'>
+        <div className='px-8 md:px-16 flex-1 overflow-y-scroll mt-12'>
             <Outlet />
         </div>
-    </div>
+    </Layout>
   )
 }
 
