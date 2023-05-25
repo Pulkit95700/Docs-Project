@@ -1,17 +1,19 @@
 import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/logocopy.png";
 import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
+  const location = useLocation();
+
   const onCloseSideBar = () => {
     if (!props.openDocsMenu) {
       props.toggleDocsMenu();
     } else {
       document
         .querySelector(".sidebar")
-        ?.classList.remove("animate__slideInLeft");
+        ?.classList?.remove("animate__slideInLeft");
       document.querySelector(".sidebar").classList.add("animate__slideOutLeft");
 
       setTimeout(() => {
@@ -23,9 +25,9 @@ const Navbar = (props) => {
   return (
     <nav className="nav fixed top-0 w-full px-8 md:px-16 bg-white z-20 shadow-md flex justify-between py-2">
       <div className="flex">
-        <button className={`text-3xl md:hidden`} onClick={onCloseSideBar}>
+        {location.pathname.includes("docs") && <button className={`text-3xl md:hidden`} onClick={onCloseSideBar}>
           <RxHamburgerMenu />
-        </button>
+        </button>}
         <Link className="flex items-center gap-2" to={"/"}>
           <img
             style={{ borderRadius: "50%", marginLeft: "1rem" }}

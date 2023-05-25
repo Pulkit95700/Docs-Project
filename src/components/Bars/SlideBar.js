@@ -1,6 +1,7 @@
 import React from "react";
 import "animate.css";
 import { NavLink } from "react-router-dom";
+import Logo from "../../assets/logocopy.png"
 
 const SlideBar = (props) => {
   return (
@@ -41,6 +42,14 @@ const SlideBar = (props) => {
         <li onClick={props.toggleDocsMenu} className="text-gray-600 hover:text-gray-800 cursor-pointer">
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
+            to="/docs/vulnerability"
+          >
+            Vulnerability
+          </NavLink>
+        </li>
+        <li onClick={props.toggleDocsMenu} className="text-gray-600 hover:text-gray-800 cursor-pointer">
+          <NavLink
+            className={({ isActive }) => (isActive ? "font-semibold" : "")}
             to="/docs/AnnualWebsite"
           >
             Annual Website Security Management Service
@@ -71,6 +80,10 @@ const SlideBar = (props) => {
           </NavLink>
         </li>
       </ul>
+
+      <div className="mt-12">
+        <img src={Logo} className="w-1/2 mx-auto" />
+      </div>
     </div>
   );
 };
