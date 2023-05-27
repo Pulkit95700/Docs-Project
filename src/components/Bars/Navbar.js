@@ -40,7 +40,7 @@ const Navbar = (props) => {
       </div>
       <ul className="hidden md:flex items-center justify-end  gap-4 md:gap-8 text-md">
         <li className="text-gray-600 hover:text-gray-800 cursor-pointer">
-          <NavLink to="/docs">Docs</NavLink>
+          <NavLink to="/docs">Home</NavLink>
         </li>
         <li className="text-gray-600 hover:text-gray-800 cursor-pointer">
           <NavLink to="/contact">Contact</NavLink>

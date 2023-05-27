@@ -3,6 +3,12 @@ import ContactImg from "../assets/contact.jpg";
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 import emailjs from "@emailjs/browser";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -10,11 +16,12 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [number, setNumber] = useState("");
   const [sendingState, setSendingState] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [error, setError] = useState(false);
 
   const formRef = useRef();
 
   const sendEmail = (e) => {
-  
     e.preventDefault();
 
     setSendingState(true);
@@ -23,19 +30,28 @@ const Contact = () => {
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then((result) => {
-        alert("Message Sent, Thank you for your response", result.text);
         setEmail("");
         setSubject("");
         setMessage("");
         setNumber("");
         setSendingState(false);
+
+        setOpenSnackbar(true);
+        setError(false);
+        setTimeout(() => {
+          setOpenSnackbar(false);
+        }, 2000);
       })
       .catch((err) => {
-        alert("An error occurred, Please try again", err.text);
         setSendingState(false);
+        setOpenSnackbar(true);
+        setError(false);
+        setTimeout(() => {
+          setOpenSnackbar(false);
+        }, 2000);
       });
   };
 
@@ -143,6 +159,22 @@ const Contact = () => {
         </div>
       </Layout>
       <Footer />
+
+      {
+        <Snackbar
+          open={openSnackbar}
+          autoHideDuration={3000}
+          onClose={() => setOpenSnackbar(false)}
+        >
+          <Alert
+            onClose={() => setOpenSnackbar(false)}
+            severity={error ? "error" : "success"}
+            sx={{ width: "100%" }}
+          >
+            {error ? "Email could not be Sent" : "Email Send Successfully"}
+          </Alert>
+        </Snackbar>
+      }
     </>
   );
 };
