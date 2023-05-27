@@ -8,10 +8,12 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [number, setNumber] = useState("");
 
   const formRef = useRef();
 
   const sendEmail = (e) => {
+  
     e.preventDefault();
 
     emailjs
@@ -26,6 +28,7 @@ const Contact = () => {
         setEmail("");
         setSubject("");
         setMessage("");
+        setNumber("");
       })
       .catch((err) => {
         alert("An error occurred, Please try again", err.text);
@@ -66,6 +69,26 @@ const Contact = () => {
                   value={email}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="name@company.com"
+                  required
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="test"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Your Phone
+                </label>
+                <input
+                  type="text"
+                  id="number"
+                  minLength={10}
+                  maxLength={10}
+                  name="number"
+                  onChange={(e) => setNumber(e.target.value)}
+                  value={number}
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Contact No."
                   required
                 />
               </div>
