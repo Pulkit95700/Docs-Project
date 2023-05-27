@@ -8,38 +8,47 @@ const Footer = () => {
   return (
     <footer class="bg-white rounded-lg shadow border-t">
       <div class="w-full md:py-8">
-        <div class="md:px-16 sm:flex sm:items-center sm:justify-between text-center">
-          <div className="flex flex-col">
-            <Link
-              to={"/"}
-              class="flex flex-col sm:flex-row sm:gap-0 gap-2  items-center mb-4 sm:mb-0 py-4 md:py-auto w-full sm:w-auto justify-center sm:justify-start"
-            >
-              <img src={LogoImg} class="h-8 mr-3" alt="Flowbite Logo" />
-              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                A TO Z Security
-              </span>
-            </Link>
-            <p className="md:ml-2 -mt-4 sm:mt-0 text-sm text-gray-500">
-              Contact: 12378992X
-            </p>
+        <div class="md:px-16 sm:flex sm:items-center sm:justify-between text-center ">
+          <div className="flex flex-col md:flex-row items-center md:items-start pt-4 md:pt-0">
+            <img src={LogoImg} class="mr-3 w-12 " alt="Flowbite Logo" />
+            <div className="flex gap-3 flex-col items-center md:items-start">
+              <Link
+                to={"/"}
+                class="flex flex-col sm:flex-row sm:gap-0 items-center sm:mb-0 md:py-auto w-full sm:w-auto justify-center sm:justify-start"
+              >
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                  A TO Z Security
+                </span>
+              </Link>
+
+              <p class="text-sm text-gray-500 dark:text-gray-400 font-semibold flex gap-2">
+                <span className="font-semibold hidden md:block">Email:</span>{" "}
+                AtoZSec11@gmail.com
+              </p>
+              <p class="text-sm text-gray-500 dark:text-gray-400 font-semibold flex gap-2">
+                <span className="font-semibold hidden md:block">Contact:</span> 9538544507
+              </p>
+            </div>
           </div>
-          <ul class="flex flex-wrap self-start mt-4 items-center text-lg mb-6 font-medium text-gray-500 sm:mb-0 dark:text-gray-400 sm:w-auto justify-center sm:justify-start">
-            <li>
-              <Link to={"/about"} class="mr-4 hover:underline md:mr-6 ">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/" class="mr-4 hover:underline md:mr-6">
-                Docs
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" class="hover:underline">
-                Contact
-              </Link>
-            </li>
-          </ul>
+          <div class="flex flex-col md:w-auto w-full items-center mt-4 md:mt-0 sm:flex-row sm:gap-8 gap-4 justify-center">
+            <ul class="flex w-full  flex-wrap self-start  items-center text-lg mb-6 font-medium text-gray-500 sm:mb-0 dark:text-gray-400 sm:w-auto justify-center sm:justify-start">
+              <li>
+                <Link to={"/about"} class="mr-4 hover:underline md:mr-6 ">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/" class="mr-4 hover:underline md:mr-6">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" class="hover:underline">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 " />
         <div class="flex flex-col items-center justify-center my-6 md:flex-row ">
