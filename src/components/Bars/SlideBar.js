@@ -112,20 +112,6 @@ const SlideBar = (props) => {
           </NavLink>
         </li>
       </ul>
-
-      <div className="mt-14 md:mt-32 self-end flex-1">
-        <img src={Logo} className="w-1/2 " />
-        <div className="hidden md:block">
-          <p className=" flex  gap-4 text-gray-600 text-sm mt-4 font-semibold">
-            <span className="w-14 font-semibold text-black">Contact:</span>
-            <a href="tel:+919538544507">+919538544507</a>
-          </p>
-          <p className=" flex  gap-4 text-gray-600 font-semibold text-sm mt-2">
-            <span className="w-14 font-semibold text-black">Email:</span>
-            <a href="mailto:atozsec11@gmail.com">AtoZSec11@gmail.com</a>
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
