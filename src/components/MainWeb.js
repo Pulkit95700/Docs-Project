@@ -48,36 +48,42 @@ const MainWeb = () => {
             imagePos="right"
             description="As business requirements and threats change, manage your assessments, plan tests, decide on the required level of testing, and make adjustments."
             image={Flexibility}
+            alt="flex-image"
           />
           <Benefitsbox
             imagePos="left"
             title="Coverage"
             description="Test mobile applications you might miss owing to resource constraints"
             image={Coverage}
+            alt="flex-image"
           />
           <Benefitsbox
             title="Consistency"
             imagePos="right"
             description="Receive consistent, high-quality MAST results for any mobile application."
             image={Consistency}
+            alt="flex-image"
           />
           <Benefitsbox
             imagePos="left"
             title="Enablement"
             description="We walk you through your test results and help you develop a remediation plan best suited to your needs."
             image={Enablement}
+            alt="flex-image"
           />
           <Benefitsbox
             title="Scalability"
             imagePos="right"
             description="We provide scalable MAST delivery through our Assessment Centers without compromising manual reviews."
             image={Scalibility}
+            alt="flex-image"
           />
           <Benefitsbox
             imagePos="left"
             title="Comprehensiveness"
             description="We use a hybrid manual and tool-based assessment technique that includes in-depth findings analysis, full reporting, and actionable remediation guidance."
             image={Comprehensiveness}
+            alt="flex-image"
           />
         </div>
       </section>

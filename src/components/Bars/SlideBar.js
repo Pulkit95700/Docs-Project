@@ -90,7 +90,7 @@ const SlideBar = (props) => {
         >
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to=""
+            to="/"
           >
             Home
           </NavLink>

@@ -26,20 +26,21 @@ const Footer = () => {
                 AtoZSec11@gmail.com
               </p>
               <p className="text-sm text-gray-500 dark:text-gray-400 font-semibold flex gap-2">
-                <span className="font-semibold hidden md:block">Contact:</span> 9538544507
+                <span className="font-semibold hidden md:block">Contact:</span>{" "}
+                +919538544507
               </p>
             </div>
           </div>
           <div className="flex flex-col md:w-auto w-full items-center mt-4 md:mt-0 sm:flex-row sm:gap-8 gap-4 justify-center">
             <ul className="flex w-full  flex-wrap self-start  items-center text-lg mb-6 font-medium text-gray-500 sm:mb-0 dark:text-gray-400 sm:w-auto justify-center sm:justify-start">
               <li>
-                <Link to={"/about"} className="mr-4 hover:underline md:mr-6 ">
-                  About
+                <Link to="/" className="mr-4 hover:underline md:mr-6">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link to="/" className="mr-4 hover:underline md:mr-6">
-                  Home
+                <Link to={"/about"} className="mr-4 hover:underline md:mr-6 ">
+                  About
                 </Link>
               </li>
               <li>
