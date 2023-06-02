@@ -1,6 +1,7 @@
 import React from 'react'
 import ParaLayout from "./ParaLayout/ParaLayout";
 import Image from "../assets/WebsiteSecurityAuditService.png";
+import ScheduleConsultation from './Buttons/ScheduleConsultation';
 
 const AnnualWebsite = () => {
   return (
@@ -11,6 +12,8 @@ const AnnualWebsite = () => {
         image={Image}
         imagePos="right"
       />
+
+      <ScheduleConsultation />
     </div>
   )
 }

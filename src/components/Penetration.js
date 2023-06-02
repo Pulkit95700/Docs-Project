@@ -1,6 +1,7 @@
 import React from 'react'
 import ParaLayout from './ParaLayout/ParaLayout'
 import Image from "../assets/PenetrationTestingService.png";
+import ScheduleConsultation from './Buttons/ScheduleConsultation';
 
 const Penetration = () => {
   return (
@@ -11,6 +12,8 @@ const Penetration = () => {
       imagePos="right"
       image={Image}
       />
+
+      <ScheduleConsultation />
     </div>
   )
 }

@@ -4,6 +4,7 @@ import Image from "../assets/MobileApplication.png";
 import FeatureBox from "./Features/FeatureBox";
 import Standard from "../assets/standard.png";
 import Comprehensive from "../assets/comprehensive.png";
+import ScheduleConsultation from "./Buttons/ScheduleConsultation";
 
 const MobApp = () => {
   return (
@@ -24,6 +25,9 @@ const MobApp = () => {
         <FeatureBox image={Standard}  title="Standard" description="Uses a combination of automatic and manual analysis to find flaws in mobile application binaries that cannot be identified with automated analysis alone." />
         <FeatureBox image={Comprehensive} title="Comprehensive" description="Extended manual analysis in addition to Standard Service is used to identify vulnerabilities in server-side functionality and application binaries operating on mobile devices." />
       </div>
+
+
+      <ScheduleConsultation />
     </div>
   );
 };

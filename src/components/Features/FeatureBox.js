@@ -11,9 +11,7 @@ const FeatureBox = (props) => {
           <h2 className="text-gray-900 text-xl title-font font-medium mb-3">
             {props.title}
           </h2>
-          <p className="leading-relaxed text-lg">
-            {props.description}
-          </p>
+          <p className="leading-relaxed text-lg">{props.description}</p>
         </div>
       </div>
     </div>

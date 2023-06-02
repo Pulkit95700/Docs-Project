@@ -8,6 +8,7 @@ import Enablement from "../assets/enablement.jpg";
 import Scalibility from "../assets/scalibility.jpg";
 import Comprehensiveness from "../assets/comprehensiveness.jpg";
 import ServicesImg from "../assets/services.jpg";
+import ScheduleConsultation from "./Buttons/ScheduleConsultation";
 
 const MainWeb = () => {
   return (
@@ -80,6 +81,8 @@ const MainWeb = () => {
           />
         </div>
       </section>
+      
+      <ScheduleConsultation />
     </div>
   );
 };

@@ -4,8 +4,14 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../assets/logocopy.png";
 
 const SlideBar = (props) => {
+  const slideBarRef = React.useRef(null);
+  const onCloseSideBar = () => {
+
+  };
+
   return (
     <div
+      ref={slideBarRef}
       style={{ animationDuration: "0.2s" }}
       className={`${
         !props.openDocsMenu && "hidden"
@@ -18,7 +24,7 @@ const SlideBar = (props) => {
         >
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/docs/WebApp"
+            to="/WebApp"
           >
             Web Application Security Testing
           </NavLink>
@@ -29,7 +35,7 @@ const SlideBar = (props) => {
         >
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/docs/MobApp"
+            to="/MobApp"
           >
             Mobile Application Security Testing
           </NavLink>
@@ -40,7 +46,7 @@ const SlideBar = (props) => {
         >
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/docs/Penetration"
+            to="/Penetration"
           >
             Penetration testing Service
           </NavLink>
@@ -51,7 +57,7 @@ const SlideBar = (props) => {
         >
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/docs/SourceCode"
+            to="/SourceCode"
           >
             Source Code Audit Service
           </NavLink>
@@ -62,7 +68,7 @@ const SlideBar = (props) => {
         >
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/docs/vulnerability"
+            to="/vulnerability"
           >
             Vulnerability
           </NavLink>
@@ -73,7 +79,7 @@ const SlideBar = (props) => {
         >
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/docs/AnnualWebsite"
+            to="/AnnualWebsite"
           >
             Annual Website Security Management Service
           </NavLink>
@@ -84,20 +90,9 @@ const SlideBar = (props) => {
         >
           <NavLink
             className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/docs"
+            to=""
           >
             Home
-          </NavLink>
-        </li>
-        <li
-          onClick={props.toggleDocsMenu}
-          className="md:hidden text-gray-600 hover:text-gray-800 cursor-pointer"
-        >
-          <NavLink
-            className={({ isActive }) => (isActive ? "font-semibold" : "")}
-            to="/contact"
-          >
-            Contact
           </NavLink>
         </li>
         <li
@@ -109,6 +104,17 @@ const SlideBar = (props) => {
             to="/about"
           >
             About
+          </NavLink>
+        </li>
+        <li
+          onClick={props.toggleDocsMenu}
+          className="md:hidden text-gray-600 hover:text-gray-800 cursor-pointer"
+        >
+          <NavLink
+            className={({ isActive }) => (isActive ? "font-semibold" : "")}
+            to="/contact"
+          >
+            Contact
           </NavLink>
         </li>
       </ul>

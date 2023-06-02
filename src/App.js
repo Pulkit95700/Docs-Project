@@ -32,9 +32,8 @@ const App = () => {
         toggleDocsMenu={toggleDocsMenuHandler}
       />
       <Routes>
-        <Route path="/" element={<Navigate to="/docs" />} />
         <Route
-          path="/docs"
+          path="/"
           element={
             <Suspense
               fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -47,7 +46,7 @@ const App = () => {
           }
         >
           <Route
-            path="/docs"
+            path="/"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -57,7 +56,7 @@ const App = () => {
             }
           />
           <Route
-            path="/docs/WebApp"
+            path="/WebApp"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -67,7 +66,7 @@ const App = () => {
             }
           />
           <Route
-            path="/docs/MobApp"
+            path="/MobApp"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -77,7 +76,7 @@ const App = () => {
             }
           />
           <Route
-            path="/docs/Penetration"
+            path="/Penetration"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -87,7 +86,7 @@ const App = () => {
             }
           />
           <Route
-            path="/docs/SourceCode"
+            path="/SourceCode"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -97,7 +96,7 @@ const App = () => {
             }
           />
           <Route
-            path="/docs/AnnualWebsite"
+            path="/AnnualWebsite"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}
@@ -107,7 +106,7 @@ const App = () => {
             }
           />
           <Route
-            path="/docs/Vulnerability"
+            path="/Vulnerability"
             element={
               <Suspense
                 fallback={<div className="my-20 mx-auto">Loading...</div>}

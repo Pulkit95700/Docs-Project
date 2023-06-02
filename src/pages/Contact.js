@@ -74,10 +74,10 @@ const Contact = () => {
               <h5 className="text-xl text-center font-semibold text-gray-900 dark:text-white">
                 Contact Us
               </h5>
-              <div class="mb-6">
+              <div className="mb-6">
                 <label
-                  for="email"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Your email
                 </label>
@@ -87,15 +87,15 @@ const Contact = () => {
                   name="email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="name@company.com"
                   required
                 />
               </div>
-              <div class="mb-6">
+              <div className="mb-6">
                 <label
-                  for="test"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  htmlFor="test"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Your Phone
                 </label>
@@ -107,15 +107,15 @@ const Contact = () => {
                   name="number"
                   onChange={(e) => setNumber(e.target.value)}
                   value={number}
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Contact No."
                   required
                 />
               </div>
-              <div class="mb-6">
+              <div className="mb-6">
                 <label
-                  for="subject"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  htmlFor="subject"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Subject
                 </label>
@@ -125,15 +125,15 @@ const Contact = () => {
                   name="subject"
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Let us know how we can help you"
                   required
                 />
               </div>
-              <div class="mb-6">
+              <div className="mb-6">
                 <label
-                  for="message"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  htmlFor="message"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Your message
                 </label>
@@ -143,7 +143,7 @@ const Contact = () => {
                   name="message"
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
-                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Your message..."
                 ></textarea>
               </div>
