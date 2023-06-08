@@ -37,7 +37,7 @@ const Navbar = (props) => {
             className="w-12"
           />
 
-          <h1 className="font font-bold text-lg">A TO Z Security11</h1>
+          <h1 className="font font-bold text-lg">A TO Z Security</h1>
         </Link>
       </div>
       <ul className="hidden md:flex items-center justify-end  gap-4 md:gap-8 text-md">

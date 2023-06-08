@@ -17,7 +17,7 @@ const Footer = () => {
                 className="flex flex-col sm:flex-row sm:gap-0 items-center sm:mb-0 md:py-auto w-full sm:w-auto justify-center sm:justify-start"
               >
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  A TO Z Security 11
+                  A TO Z Security 
                 </span>
               </Link>
 
@@ -88,7 +88,7 @@ const Footer = () => {
         <span className="block text-sm text-gray-500 sm:text-center mb-4 sm:mb-0 dark:text-gray-400 text-center">
           © 2023{" "}
           <Link to="/" className="hover:underline">
-            A To Z Security11™
+            A To Z Security™
           </Link>
           . All Rights Reserved.
         </span>

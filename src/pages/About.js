@@ -66,7 +66,9 @@ const About = () => {
 
         <hr className="my-8 mt-20"></hr>
         <section className="about__headers flex flex-col gap-10 px-10 md:px-20 mt-14">
-          <h1 className="text-4xl font-semibold text-center text-gray-600">Our Mission</h1>
+          <h1 className="text-4xl font-semibold text-center text-gray-600">
+            Our Mission
+          </h1>
           <ParaLayout description="We provide actionable recommendations to enhance the security posture of your codebase. We ensures that your website remains secure, minimizing the risk of cyber threats and ensuring a seamless user experience. we prioritize delivering exceptional customer service, staying up-to-date with the latest security trends, and employing best practices to safeguard our clients' digital assets. Partner with us to secure your critical applications, systems, and infrastructure from evolving cyber threats. We hope that you will support us. Feel free to contact us and select any consultation service you want." />
         </section>
       </Layout>
